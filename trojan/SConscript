@@ -1,0 +1,7 @@
+Import('*')
+
+DebugFlag('Trojan')
+
+SimObject('TrojanDevice.py', sim_objects = ["TrojanDevice"])
+
+Source('trojan_device.cc')

@@ -1,0 +1,14 @@
+#!/bin/sh
+#alias roi="m5 fail 3"
+if [ "$SCRIPT_CALLED" != "1" ]; then
+    echo "first script call : checkpoint";
+    cd /home
+    echo userspace > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    m5 checkpoint ;
+    export SCRIPT_CALLED=1
+    m5 readfile | sh;
+else
+echo "second script call";
+./apps/attack4/send 50000 5000 
+m5 exit
+fi;
