@@ -5,8 +5,8 @@
 **1. Clone the repository:**
 
 ```
-git clone https://github.com/CarlosAndresLARA/dvfs-gem5.git
-cd dvfs-gem5
+git clone https://github.com/CarlosAndresLARA/int-gem5.git
+cd int-gem5
 ```
 
 **2. Get/build the simulation sources (warning: requires root privileges):**
